@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create table method 2</title>
+</head>
+<body>
+    <ul class="language">
+        <li>javascrit</li>
+    </ul>
+    <script>
+        
+        // simple way 
+        function addLang(params) {
+           const li = document.createElement('li')
+           li.innerHTML = `${params}`;
+           document.querySelector(".language").appendChild(li)
+           
+
+        }
+        addLang("java");
+        addLang("c++")
+        addLang("python")
+
+        // optimised way
+
+        function addLanguage(params) {
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(params))
+            document.querySelector(".language").appendChild(li)    
+        }
+        addLanguage("ruby")
+    </script>
+</body>
+</html>

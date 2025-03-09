@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> craete Table using js</title>
+</head>
+
+<body>
+    <div class="btn">
+        <button onclick="createTable()">create table</button>
+    </div>
+
+
+
+    <script>
+
+        function createTable() {
+            const table = document.createElement('table');
+            console.log(table);
+            table.style.backgroundColor = "lightblue"
+            const trow = document.createElement('tr')
+            table.appendChild(trow);
+            const theading1 = document.createElement("th");
+            trow.appendChild(theading1)
+            console.log(table);
+            theading1.innerText = "1";
+            const theading2 = document.createElement('th');
+            theading2.innerText = "name"
+            trow.appendChild(theading2)
+            document.body.appendChild(table);
+        }
+
+
+    </script>
+</body>
+
+</html>
