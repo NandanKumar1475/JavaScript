@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesdat</div>
+        <div class="day">thirsday</div>
+        <div class="day">friday</div>
+        <div class="day">saturda</div>
+    </div>
+    <h1>Display Details here</h1>
+    <div id="showData">
+
+    </div>
+    <script>
+        // accesing parents
+        const parent = document.querySelector('.parent');
+        console.log(parent);
+        parent.style.backgroundColor = "lightblue"
+        parent.style.padding = "20px"
+        parent.style.margin = "10px"
+
+        // accessing parent children
+        const pChildren = parent.children;
+        console.log(pChildren);
+        pChildren[0].style.margin = "10px"
+        pChildren[1].style.margin = "10px"
+        pChildren[2].style.margin = "10px"
+        pChildren[3].style.margin = "10px"
+        pChildren[4].style.margin = "10px"
+
+        for (let index = 0; index < parent.children.length; index++) {
+            console.log(parent.children[index].innerHTML);
+        }
+        const data = document.getElementById("showData");
+        console.log(data);
+        
+        data.innerHTML = "hii"
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
