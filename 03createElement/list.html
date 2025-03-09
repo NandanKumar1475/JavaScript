@@ -10,7 +10,7 @@
         <li>javascrit</li>
     </ul>
     <script>
-        
+
         // simple way 
         function addLang(params) {
            const li = document.createElement('li')
@@ -31,6 +31,17 @@
             document.querySelector(".language").appendChild(li)    
         }
         addLanguage("ruby")
+        // editing 
+        function updateText(newData,n) {
+            const nli = document.querySelector("li:nth-child(n)");
+            const newli = document.createElement('li');
+            newli.textContent = `${newData}`;
+            nli.appendChild(newli);  
+        }
+        updateText("ram",3);
+        updateText("hanuman",3);
+        updateText("sita",4)
+        
     </script>
 </body>
 </html>
